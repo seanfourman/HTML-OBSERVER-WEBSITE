@@ -77,7 +77,7 @@ body {
 
 /* NAVIGATION -> MEDIA QUERIES */
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   /* maybe need to change to 960px because of task requirements, makes no sense through, ask maayan later */
   .nav-section {
     display: none; /* hide navigation bar links */
@@ -131,7 +131,7 @@ body {
 }
 
 /* text goes to center, looks better for mobile */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .main-image-title {
     width: 80%; /* needed for paragraph text spread */
     top: 50%; /* RECENTER TO MIDDLE */
@@ -232,7 +232,7 @@ body {
 }
 
 /* when going under large screen (desktop) sizes, make the articles on the main image section disappear */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .main-articles {
     display: none;
   }
@@ -268,7 +268,7 @@ body {
 }
 
 /* when going under large screen (desktop) sizes, make the articles on the main image section disappear */
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .featured-header {
     width: 100%;
     justify-content: center; /* move to center for mobile */
@@ -317,7 +317,7 @@ body {
   grid-row: auto;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .featured-articles {
     grid-template-columns: 1fr; /* force all articles to go in a single column for mobile */
     grid-template-rows: auto; /* calculate amount of needed rows based on amount of items in column */
@@ -368,12 +368,12 @@ body {
 
 .featured-article h1 {
   width: 90%;
-  font-size: 0.8rem; /* SWAP THIS IF CHANGING TO 860px IF REQUESTED IN THE TASK FOR SOME REASON, MAKE IT BIGGER */
+  font-size: 1rem;
   font-weight: 700;
 }
 
 .featured-article.large h1 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 /* ---------- SECONDARY IMAGE ---------- */
@@ -408,7 +408,7 @@ body {
   background-color: #00a9a9;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .secondary-image-title {
     width: 90%; /* needed for paragraph text spread */
   }
@@ -492,7 +492,7 @@ body {
   text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .topic-card-main {
     grid-template-columns: 1fr;
     width: 85%;
@@ -536,7 +536,7 @@ body {
   background-color: #e5c06c;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .third-image-title h1 {
     font-size: 2rem;
   }
@@ -566,14 +566,10 @@ body {
   height: 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
   .footer-container {
     width: 80%; /* looks better for mobile */
     text-align: center;
     flex-direction: column; /* put text and logo in the same column */
   }
-}
-
-.hod {
-  width: 50%;
 }
