@@ -573,3 +573,7 @@ body {
     flex-direction: column; /* put text and logo in the same column */
   }
 }
+
+.hod {
+  width: 100%;
+}
