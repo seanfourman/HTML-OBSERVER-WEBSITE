@@ -1,0 +1,558 @@
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  margin: 0; /* adjusted to avoid the weird html defaults */
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+
+.navbar {
+  background-color: #000000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* keep navbar at top priority in website, always stay on top */
+}
+
+.navbar-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* LEFT 3 LINKS, CENTER LOGO, RIGHT 3 LINKS */
+  max-width: 1300px;
+  margin: 0.5rem auto;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: space-around; /* EVENLY SPACE OUT THE LINKS DO NOT TOUCH */
+  align-items: center; /* y axis center for nav bar links */
+}
+
+.navbar-logo img {
+  height: 65px;
+}
+
+/* NAVIGATION -> LINKS */
+
+.nav-link {
+  color: #FFFFFF;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #CCCCCC;
+}
+
+/* NAVIGATION -> MOBILE */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background-color: #000000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+/* NAVIGATION -> MENU ICON & OPENING FUNCTIONALITY */
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+
+.mobile-nav .nav-link {
+  padding: 1rem;
+  text-align: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked + .menu-icon + .mobile-nav {
+  display: flex;
+}
+
+/* NAVIGATION -> MEDIA QUERIES */
+
+@media (max-width: 768px) { /* maybe need to change to 960px because of task requirements, makes no sense through, ask maayan later */
+  .nav-section {
+    display: none; /* hide navigation bar links */
+  }
+
+  .navbar-logo {
+    padding-left: 25px;
+  }
+
+  .navbar-container {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .menu-icon {
+    justify-self: end; /* move menu bar icon to right */
+    margin-right: 2rem;
+  }
+
+  .mobile-nav .nav-link {
+    border-top: 1px solid #444444;
+  }
+  .menu-icon {
+      display: block;
+  }
+}
+
+/* ---------- MAIN IMAGE ---------- */
+
+.main-image {
+  position: relative;
+  width: 100%;
+  height: 650px; /* maybe change later? */
+  background-image: url('images/earth.png');
+  background-size: cover; /* stretch to fit */
+  background-position: center;
+  margin-top: 65px; /* take into consideration the nav bar */
+}
+
+.main-image-title {
+  position: absolute;
+  color: #FFFFFF;
+  top: 20%;
+  left: 5%;
+}
+
+.main-image-title h1 {
+  font-size: 4.5rem;
+  letter-spacing: 10px;
+  font-weight: 700;
+}
+
+/* text goes to center, looks better for mobile */
+@media (max-width: 768px) {
+  .main-image-title {
+    width: 80%; /* needed for paragraph text spread */
+    top: 50%; /* RECENTER TO MIDDLE */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .main-image-title h1 {
+    margin-bottom: 0px;
+    font-size: 7.5rem;
+    letter-spacing: 5px;
+  }
+
+  .main-image-title p {
+    margin-top: 0px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-image-title {
+    width: 100%; /* needed for text spread adjustment */
+  }
+
+  .main-image-title h1 {
+    margin-bottom: 0px;
+    font-size: 7.5rem;
+    letter-spacing: 5px;
+  }
+
+  .main-image-title p {
+    margin-top: 0px;
+    font-size: 1.1rem;
+  }
+}
+
+/* ---------- MAIN IMAGE -> BUTTON ---------- */
+
+.btn {
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  display: inline-block; /* either this or padding, need to check later */
+  color: #FFFFFF;
+  background-color: #444444; /* default to gray, change individually later */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  /*border-radius: 5px;*/
+}
+
+.btn:hover {
+  transform: scale(1.02);
+  opacity: 0.75;
+}
+
+/*
+.main-image-title a {
+  background-color: #ED1C24;
+}
+*/
+
+.main-image-btn {
+  background-color: #ED1C24;
+}
+
+/* ---------- MAIN IMAGE -> ARTICLES ---------- */
+
+.main-articles {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.article-title {
+  font-size: 0.75rem;
+  color: #DDDDDD;
+  margin-bottom: 5px;
+}
+
+.link-title {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+.link-title:hover {
+  color: #ED1C24;
+}
+
+.arrow {
+  color: #ED1C24;
+  font-weight: 700;
+}
+
+/* when going under large screen (desktop) sizes, make the articles on the main image section disappear */
+@media (max-width: 768px) {
+  .main-articles {
+    display: none;
+  }
+}
+
+/* ---------- FEATURED ARTICLES ---------- */
+
+/* FEATURED ARTICLES -> TITLES */
+
+.featured-header {
+  display: flex;
+  justify-content: space-between; /* move both to opposite ends, right and left */
+  align-items: center; /* center for y axis */
+  width: 75%;
+  margin: 50px auto;
+}
+
+.featured-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.more-link {
+  font-weight: 700;
+  color: #DD3445;
+  text-decoration: none;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.more-link:hover {
+  opacity: 0.65;
+}
+
+/* when going under large screen (desktop) sizes, make the articles on the main image section disappear */
+@media (max-width: 768px) {
+  .featured-header {
+    width: 100%;
+    justify-content: center; /* move to center for mobile */
+  }
+  
+  .featured-header h2 {
+    font-size: 3rem;
+  }
+
+  .more-link {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* FEATURED ARTICLES -> CARDS */
+
+.featured-articles {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Large article spans 2fr; others 1fr each */
+  /* grid-template-rows: auto auto; */
+  grid-template-rows: repeat(2, 1fr); /* Two equal rows */
+  gap: 20px; /* Space between grid items */
+  width: 75%; /* Restrict overall width */
+  margin: 0 auto; /* Center the grid */
+}
+
+.featured-article.large {
+  grid-column: 1 / 2; /* Spans the first column */
+  grid-row: 1 / 3; /* Spans two rows */
+}
+
+.featured-article.small {
+  grid-column: auto; /* Occupy one column each */
+  grid-row: auto; /* Stack naturally */
+}
+
+@media (max-width: 768px) {
+  .featured-articles {
+    grid-template-columns: 1fr; /* force all articles to go in a single column for mobile */
+    grid-template-rows: auto; /* calculate amount of needed rows based on amount of items in column */
+    gap: 15px;
+    width: 85%;
+  }
+
+  .featured-article.large,
+  .featured-article.small {
+    grid-column: span 1; /* Full-width for each article */
+    grid-row: span 1; /* Each in its own row */
+  }
+}
+
+/* FEATURED ARTICLES -> CARD TITLES AND TEXT */
+
+.featured-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.featured-card:hover {
+  transform: scale(1.05);
+}
+
+.featured-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.featured-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  color: #FFFFFF;
+  padding: 15px;
+}
+
+.read-time {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+/* ---------- SECONDARY IMAGE ---------- */
+
+.secondary-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('images/oceanwater.png');
+  background-size: cover; /* stretch to fit */
+  background-position: center;
+  margin-top: 50px;
+}
+
+.secondary-image-title {
+  position: absolute;
+  width: 65%;
+  color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.secondary-image-title h1 {
+  margin: 0px;
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.secondary-image-btn {
+  background-color: #00A9A9;
+}
+
+@media (max-width: 768px) {
+  .secondary-image-title {
+    width: 90%; /* needed for paragraph text spread */
+  }
+
+  .secondary-image-title h1 {
+    margin-bottom: 0px;
+    font-size: 3.5rem;
+  }
+
+  .secondary-image-title p {
+    margin-top: 0px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .secondary-image-title {
+    width: 100%; /* needed for text spread adjustment */
+  }
+
+  .secondary-image-title h1 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ---------- LEARN MORE SECTION ---------- */
+
+/* LEARN MORE -> TITLES */
+
+.learn-more {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.learn-more p {
+  font-size: 12px;
+}
+
+.learn-more h1 {
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/* LEARN MORE -> CARDS */
+
+.topic-card-main {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 90%; 
+  margin: 0 auto;
+}
+
+.topic-card {
+  transition: transform 0.3s ease-in-out;
+}
+
+.topic-card:hover {
+  transform: scale(1.05);
+}
+
+.topic-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* fixes image distortion stuff for responsivity */
+}
+
+.topic-content {
+  border: 2px solid #DDDDDD;
+}
+
+.topic-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.topic-link {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .topic-card-main {
+    grid-template-columns: 1fr;
+    width: 85%;
+    gap: 20px;
+  }
+}
+
+/* ---------- THIRD IMAGE ---------- */
+
+.third-image {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-image: url('images/forest.png');
+  background-size: cover; /* stretch to fit */
+  background-position: center;
+  margin-top: 50px;
+}
+
+.third-image-title {
+  position: absolute;
+  width: 80%;
+  color: #FFFFFF;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 700;
+}
+
+.third-image-title h1 {
+  margin: 0px;
+  font-size: 3.5rem;
+}
+
+.third-image-title p {
+  margin-bottom: 20px;
+}
+
+.third-image-btn {
+  background-color: #E5C06C;
+}
+
+@media (max-width: 768px) {
+  .third-image-title h1 {
+    font-size: 2rem;
+  }
+
+  .third-image-title p {
+    font-size: 0.8rem; /* look good, maybe too small? might change later but kinda irrelevant */
+  }
+}
+
+/* FOOTER */
+.footer {
+  background-color: #000000;
+  padding: 15px 0;
+  color: #8d8d8d;
+  font-size: 0.8rem;
+}
+
+.footer-container {
+  width: 65%;
+  margin: 0 auto;
+  display: flex; /* put in same row */
+  align-items: center; /* center y axis */
+  justify-content: space-between;
+}
+
+.footer-logo img {
+  height: 50px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    width: 80%; /* looks better for mobile */
+    text-align: center;
+    flex-direction: column; /* put text and logo in the same column */
+  }
+}
