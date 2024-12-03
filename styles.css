@@ -368,7 +368,7 @@ body {
 
 .featured-article h1 {
   width: 90%;
-  font-size: 0.8rem;
+  font-size: 0.8rem; /* SWAP THIS IF CHANGING TO 860px IF REQUESTED IN THE TASK FOR SOME REASON, MAKE IT BIGGER */
   font-weight: 700;
 }
 
