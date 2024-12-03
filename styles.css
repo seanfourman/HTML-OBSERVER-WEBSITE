@@ -1,5 +1,5 @@
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   margin: 0; /* adjusted to avoid the weird html defaults */
 }
@@ -34,13 +34,13 @@ body {
 /* NAVIGATION -> LINKS */
 
 .nav-link {
-  color: #FFFFFF;
+  color: #ffffff;
   font-weight: 700;
   text-decoration: none;
 }
 
 .nav-link:hover {
-  color: #CCCCCC;
+  color: #cccccc;
 }
 
 /* NAVIGATION -> MOBILE */
@@ -59,7 +59,7 @@ body {
 .menu-icon {
   display: none;
   font-size: 2rem;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .mobile-nav .nav-link {
@@ -77,7 +77,8 @@ body {
 
 /* NAVIGATION -> MEDIA QUERIES */
 
-@media (max-width: 768px) { /* maybe need to change to 960px because of task requirements, makes no sense through, ask maayan later */
+@media (max-width: 768px) {
+  /* maybe need to change to 960px because of task requirements, makes no sense through, ask maayan later */
   .nav-section {
     display: none; /* hide navigation bar links */
   }
@@ -100,7 +101,7 @@ body {
     border-top: 1px solid #444444;
   }
   .menu-icon {
-      display: block;
+    display: block;
   }
 }
 
@@ -110,7 +111,7 @@ body {
   position: relative;
   width: 100%;
   height: 650px; /* maybe change later? */
-  background-image: url('images/earth.png');
+  background-image: url("images/earth.png");
   background-size: cover; /* stretch to fit */
   background-position: center;
   margin-top: 65px; /* take into consideration the nav bar */
@@ -118,7 +119,7 @@ body {
 
 .main-image-title {
   position: absolute;
-  color: #FFFFFF;
+  color: #ffffff;
   top: 20%;
   left: 5%;
 }
@@ -176,7 +177,7 @@ body {
   font-size: 1.25rem;
   padding: 0.75rem 1.25rem;
   display: inline-block; /* either this or padding, need to check later */
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #444444; /* default to gray, change individually later */
   transition: transform 0.3s ease, opacity 0.3s ease;
   /*border-radius: 5px;*/
@@ -194,7 +195,7 @@ body {
 */
 
 .main-image-btn {
-  background-color: #ED1C24;
+  background-color: #ed1c24;
 }
 
 /* ---------- MAIN IMAGE -> ARTICLES ---------- */
@@ -211,7 +212,7 @@ body {
 
 .article-title {
   font-size: 0.75rem;
-  color: #DDDDDD;
+  color: #dddddd;
   margin-bottom: 5px;
 }
 
@@ -222,11 +223,11 @@ body {
 }
 
 .link-title:hover {
-  color: #ED1C24;
+  color: #ed1c24;
 }
 
 .arrow {
-  color: #ED1C24;
+  color: #ed1c24;
   font-weight: 700;
 }
 
@@ -257,7 +258,7 @@ body {
 
 .more-link {
   font-weight: 700;
-  color: #DD3445;
+  color: #dd3445;
   text-decoration: none;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -272,7 +273,7 @@ body {
     width: 100%;
     justify-content: center; /* move to center for mobile */
   }
-  
+
   .featured-header h2 {
     font-size: 3rem;
   }
@@ -298,6 +299,11 @@ body {
   gap: 20px; /* Space between grid items */
   width: 75%; /* Restrict overall width */
   margin: 0 auto; /* Center the grid */
+}
+
+.featured-articles .featured-card,
+.featured-articles .featured-card img {
+  height: 100%;
 }
 
 .featured-article.large {
@@ -347,10 +353,13 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
   background: rgba(0, 0, 0, 0.35);
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 15px;
+}
+
+.featured-article.large .featured-content {
+  width: 100%;
 }
 
 .read-time {
@@ -365,7 +374,7 @@ body {
   position: relative;
   width: 100%;
   height: 400px;
-  background-image: url('images/oceanwater.png');
+  background-image: url("images/oceanwater.png");
   background-size: cover; /* stretch to fit */
   background-position: center;
   margin-top: 50px;
@@ -374,7 +383,7 @@ body {
 .secondary-image-title {
   position: absolute;
   width: 65%;
-  color: #FFFFFF;
+  color: #ffffff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -388,7 +397,7 @@ body {
 }
 
 .secondary-image-btn {
-  background-color: #00A9A9;
+  background-color: #00a9a9;
 }
 
 @media (max-width: 768px) {
@@ -443,7 +452,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  width: 90%; 
+  width: 90%;
   margin: 0 auto;
 }
 
@@ -462,7 +471,7 @@ body {
 }
 
 .topic-content {
-  border: 2px solid #DDDDDD;
+  border: 2px solid #dddddd;
 }
 
 .topic-title {
@@ -489,7 +498,7 @@ body {
   position: relative;
   width: 100%;
   height: 250px;
-  background-image: url('images/forest.png');
+  background-image: url("images/forest.png");
   background-size: cover; /* stretch to fit */
   background-position: center;
   margin-top: 50px;
@@ -498,7 +507,7 @@ body {
 .third-image-title {
   position: absolute;
   width: 80%;
-  color: #FFFFFF;
+  color: #ffffff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -516,7 +525,7 @@ body {
 }
 
 .third-image-btn {
-  background-color: #E5C06C;
+  background-color: #e5c06c;
 }
 
 @media (max-width: 768px) {
