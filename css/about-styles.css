@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     height: 500px; /* maybe change later? */
-    background-image: url("/images/about.png");
+    background-image: url("/images/about.webp");
     background-size: cover; /* stretch to fit */
     background-position: center;
   }
@@ -96,7 +96,7 @@
 
 .info-paragraph-link {
   font-weight: 700;
-  text-decoration: none;
+  /*text-decoration: none;*/
   color: #ed1c24;
 }
 

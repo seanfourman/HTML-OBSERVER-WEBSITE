@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: 650px; /* maybe change later? */
-  background-image: url("/images/earth.png");
+  background-image: url("/images/earth.webp");
   background-size: cover; /* stretch to fit */
   background-position: center;
 }
@@ -274,7 +274,7 @@
   position: relative;
   width: 100%;
   height: 400px;
-  background-image: url("/images/earth2.png");
+  background-image: url("/images/earth2.webp");
   background-size: cover; /* stretch to fit */
   background-position: center;
   margin-top: 50px;
@@ -406,7 +406,7 @@
   position: relative;
   width: 100%;
   height: 250px;
-  background-image: url("/images/space.png");
+  background-image: url("/images/space.webp");
   background-size: cover; /* stretch to fit */
   background-position: center;
   margin-top: 50px;

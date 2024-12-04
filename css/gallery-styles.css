@@ -1,0 +1,121 @@
+/* ---------- GALLERY MAIN IMAGE ---------- */
+
+.gallery-main-image {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url("/images/solarsystemgallery.webp");
+    background-size: cover; /* stretch to fit */
+    background-position: center;
+  }
+
+  .gallery-image-title {
+    position: absolute;
+    color: #ffffff;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .gallery-image-title h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+  }
+  
+  /* text goes to center, looks better for mobile */
+  @media (max-width: 960px) {
+    .main-image-title {
+      width: 80%; /* needed for paragraph text spread */
+      top: 50%; /* RECENTER TO MIDDLE */
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  
+    .main-image-title h1 {
+      margin-bottom: 0px;
+      font-size: 7.5rem;
+      letter-spacing: 5px;
+    }
+  
+    .main-image-title p {
+      margin-top: 0px;
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-image-title {
+      width: 100%; /* needed for text spread adjustment */
+    }
+  
+    .main-image-title h1 {
+      margin-bottom: 0px;
+      font-size: 7.5rem;
+      letter-spacing: 5px;
+    }
+  
+    .main-image-title p {
+      margin-top: 0px;
+      font-size: 1.1rem;
+    }
+  }
+
+ /* ---------- PHOTOS ---------- */
+
+ .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: repeat(5, auto); /* 5 rows, auto for amount of rows used */
+    gap: 20px;
+    width: 90%;
+    margin: 50px auto;
+  }
+  
+  .photo-container {
+    position: relative; /* position text relative to the container */
+    overflow: hidden; /* make text stay within the container */
+    width: 100%;
+    height: 350px; /* SET SPECIFIC HEIGHT FOR ALL IMAGES, MAYBE CHANGE LATER */
+  }
+  
+  .photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps image aspect ratio */
+    display: block;
+  }
+  
+  .photo-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    opacity: 0; /* start with 0 opacity to be hidden */
+    transition: opacity 0.3s ease;
+  }
+  
+  .photo-container:hover .photo-text {
+    opacity: 1;
+  }  
+
+  @media (max-width: 960px) {
+    .photo-gallery {
+      grid-template-columns: repeat(2, 1fr); /* switch to 2 columns */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .photo-gallery {
+      grid-template-columns: 1fr; /* switch to 1 column */
+    }
+  }
+  
