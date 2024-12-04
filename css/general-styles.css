@@ -6,6 +6,11 @@ body {
     margin: 0; /* adjusted to avoid the weird html defaults */
     margin-top: 65px; /* take into consideration nav bar for 65px */
   }
+
+/* make radio buttons invisible throughout all the website */
+input[type="radio"] {
+    display: none;
+  }
   
   /* ---------- NAVIGATION BAR ---------- */
   

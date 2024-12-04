@@ -12,52 +12,27 @@
   .about-main-title {
     position: absolute;
     color: #ffffff;
-    top: 5%;
-    left: 10%;
-    width: 52%;
+    top: 50%;
+    left: 50%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+    text-align: center;
   }
   
   .about-main-title h1 {
     font-size: 4.5rem;
-    letter-spacing: 10px;
     font-weight: 700;
   }
 
-  .about-main-image p  {
-    padding-left: 300px;
-  }
-  
   /* text goes to center, looks better for mobile */
   @media (max-width: 960px) {
     .about-main-title {
       width: 80%; /* needed for paragraph text spread */
-      top: 50%; /* RECENTER TO MIDDLE */
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
     }
   
     .about-main-title h1 {
+      font-size: 7rem;
       margin-bottom: 0px;
-      font-size: 7.5rem;
-      letter-spacing: 5px;
-    }
-  
-    .about-main-title p {
-      margin-top: 0px;
-      font-size: 1.2rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .about-main-title {
-      width: 100%; /* needed for text spread adjustment */
-    }
-  
-    .about-main-title h1 {
-      margin-bottom: 0px;
-      font-size: 7.5rem;
-      letter-spacing: 5px;
     }
   
     .about-main-title p {
@@ -65,4 +40,99 @@
       font-size: 1.1rem;
     }
   }
+  
+  @media (max-width: 480px) {
+    .about-main-title {
+      width: 90%; /* needed for text spread adjustment */
+    }
+  
+    .about-main-title h1 {
+      font-size: 7rem;
+      margin-bottom: 0px;
+    }
+  
+    .about-main-title p {
+      margin-top: 0px;
+      font-size: 1.1rem;
+    }
+  }
+
+/* ---------- 3 BUTTONS FOR INFORMATION ---------- */
+
+.button-container {
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.button-container label {
+  display: inline-block; /* inline-block is the only thing that works with the responsivity stuff, i have no clue why */
+  padding: 10px 50px;
+  font-size: 1.3rem;
+  color: #000000;
+  font-weight: 700;
+  text-align: center;
+  border-bottom: 2px solid #dddddd;
+  cursor: pointer; /* change cursor to pointer to resemble an actual button */
+}
+
+.button-container label:hover {
+  border-bottom: 2px solid #ed1c24;
+}
+
+/* keep the selected category marked in red */
+#button1:checked + label,
+#button2:checked + label,
+#button3:checked + label {
+  border-bottom: 2px solid #ed1c24;
+}
+
+.info-paragraph {
+  display: none; /* hide the information text in the paragraphs by default when loading page */
+  margin: 50px 0;
+  font-size: 1rem;
+  line-height: 25px;
+}
+
+.info-paragraph-link {
+  font-weight: 700;
+  text-decoration: none;
+  color: #ed1c24;
+}
+
+/* follow what radio button is pressed and use it to hide other information paragraphs */
+#button1:checked ~ .info-paragraph-container #paragraph1,
+#button2:checked ~ .info-paragraph-container #paragraph2,
+#button3:checked ~ .info-paragraph-container #paragraph3 {
+  display: block;
+}
+
+@media (max-width: 960px) {
+  .button-container label {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .info-paragraph {
+    font-size: 1rem;
+    margin: 30px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .button-container {
+    padding: 0 20px;
+  }
+
+  .button-container label {
+    display: block; /* stack on top of each other for small screens and such */
+    margin: 10px 0;
+  }
+
+  .info-paragraph {
+    font-size: 1rem;
+    margin: 20px 0;
+  }
+}
+
   
