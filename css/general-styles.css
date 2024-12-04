@@ -1,10 +1,15 @@
 /* ---------- BODY ---------- */
 
+html {
+  scroll-behavior: smooth; /* smooth scrolling effect when pressing on website logo */
+  scroll-padding-top: 85px; /* match navbar height, need to check if this even works */
+}
+
 body {
     font-family: "Inter", sans-serif;
     font-size: 1rem;
     margin: 0; /* adjusted to avoid the weird html defaults */
-    margin-top: 65px; /* take into consideration nav bar for 65px */
+    margin-top: 80px; /* take into consideration nav bar for 85px -> don't try to change this to 85px, you'll get brain damage */
   }
 
 /* make radio buttons invisible throughout all the website */

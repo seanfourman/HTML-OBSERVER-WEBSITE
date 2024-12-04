@@ -4,7 +4,7 @@
     position: relative;
     width: 100%;
     height: 500px;
-    background-image: url("/images/solarsystemgallery.webp");
+    background-image: url("/images/gallery.webp");
     background-size: cover; /* stretch to fit */
     background-position: center;
   }
@@ -24,41 +24,34 @@
     font-weight: 700;
     margin-bottom: 0px;
   }
-  
-  /* text goes to center, looks better for mobile */
+
   @media (max-width: 960px) {
-    .main-image-title {
+    .gallery-image-title {
       width: 80%; /* needed for paragraph text spread */
-      top: 50%; /* RECENTER TO MIDDLE */
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
     }
   
-    .main-image-title h1 {
+    .gallery-image-title h1 {
+      font-size: 7rem;
       margin-bottom: 0px;
-      font-size: 7.5rem;
-      letter-spacing: 5px;
     }
   
-    .main-image-title p {
+    .gallery-image-title p {
       margin-top: 0px;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
   }
   
   @media (max-width: 480px) {
-    .main-image-title {
-      width: 100%; /* needed for text spread adjustment */
+    .gallery-image-title {
+      width: 90%; /* needed for text spread adjustment */
     }
   
-    .main-image-title h1 {
-      margin-bottom: 0px;
-      font-size: 7.5rem;
+    .gallery-image-title h1 {
+      font-size: 5rem;
       letter-spacing: 5px;
     }
   
-    .main-image-title p {
+    .gallery-image-title p {
       margin-top: 0px;
       font-size: 1.1rem;
     }

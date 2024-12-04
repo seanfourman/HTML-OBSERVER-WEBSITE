@@ -24,7 +24,6 @@
     font-weight: 700;
   }
 
-  /* text goes to center, looks better for mobile */
   @media (max-width: 960px) {
     .about-main-title {
       width: 80%; /* needed for paragraph text spread */
