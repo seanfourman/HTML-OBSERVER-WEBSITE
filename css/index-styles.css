@@ -63,23 +63,6 @@
 
 /* ---------- MAIN IMAGE -> BUTTON ---------- */
 
-.btn {
-  font-weight: 700;
-  text-decoration: none;
-  font-size: 1.25rem;
-  padding: 0.75rem 1.25rem;
-  display: inline-block; /* either this or padding, need to check later */
-  color: #ffffff;
-  background-color: #444444; /* default to gray, change individually later */
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  /*border-radius: 5px;*/
-}
-
-.btn:hover {
-  transform: scale(1.02);
-  opacity: 0.75;
-}
-
 /*
 .main-image-title a {
   background-color: #ED1C24;

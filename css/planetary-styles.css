@@ -129,19 +129,31 @@ body.planets-page {
 
 @media (max-width: 960px) {
   .planet {
-    width: 200px; /* Smaller size for medium screens */
-    height: 200px;
+    width: 300px; /* Smaller size for medium screens */
+    height: 300px;
   }
 
-  .planet-info {
-    max-width: 80%; /* Allow text to take more width */
+  .left-planet {
+    left: -15%; /* Adjust position for medium screens */
+  }
+
+  .right-planet {
+    right: -15%; /* Adjust position for medium screens */
   }
 }
 
 @media (max-width: 480px) {
   .planet {
-    width: 150px; /* Even smaller size for small screens */
-    height: 150px;
+    width: 300px; /* Even smaller size for small screens */
+    height: 300px;
+  }
+
+  .left-planet {
+    left: -50%; /* Adjust position for small screens */
+  }
+
+  .right-planet {
+    right: -50%; /* Adjust position for small screens */
   }
 
   .planet-info h2 {
@@ -151,4 +163,26 @@ body.planets-page {
   .planet-info p {
     font-size: 0.9rem; /* Adjust paragraph size */
   }
+}
+
+/* ---------- NAVIGATION BAR ---------- */
+.navbar .nav-link:hover {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add shadow effect on hover */
+}
+
+/* Add animation for satellink text */
+@keyframes satellink-animation {
+  0% {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.navbar .nav-link[href="/html/satellink.html"]:hover {
+  animation: satellink-animation 1s infinite;
 }

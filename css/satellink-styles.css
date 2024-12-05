@@ -97,6 +97,11 @@
     opacity: 1;
 }
 
+.circle-card:hover .satellink-title {
+    opacity: 0;
+    transition: opacity 1s ease-in-out; /* fade out animation */
+}
+
 .satellink-title {
     position: absolute;
     top: 30%;
@@ -104,8 +109,42 @@
     transform: translate(-50%, -50%);
     text-align: center;
     font-size: 5.5rem;
-    color: #fff;
+    color: #ffffff;
     z-index: 1;
+    transition: opacity 4s ease-in-out; /* fade in animation */
+}
+
+.satellink-button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    transition: opacity 4s ease-in-out; /* fade in animation */
+}
+
+.satellink-main-image p {
+    position: absolute;
+    width: 100%;
+    top: 87.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 400;
+}
+
+.satellink-image-btn {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
 }
 
 @media (max-width: 960px) {
@@ -149,6 +188,11 @@
     .satellink-title {
         font-size: 3.5rem;
     }
+
+    .satellink-subtitle {
+        font-size: 1rem;
+    }
+
 
     .circle-card {
         width: 200px;

@@ -118,6 +118,41 @@ input[type="radio"] {
     }
   }
 
+  /* ---------- BUTTON ---------- */
+
+  .btn {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.25rem;
+    display: inline-block; /* either this or padding, need to check later */
+    color: #ffffff;
+    background-color: #444444; /* default to gray, change individually later */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /*border-radius: 5px;*/
+  }
+  
+  .btn:hover {
+    transform: scale(1.02);
+    opacity: 0.75;
+  }
+
+  .small-btn {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.5rem;
+    display: inline-block; /* either this or padding, need to check later */
+    color: #ffffff;
+    background-color: transparent; /* make background transparent initially */
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    /*border-radius: 5px;*/
+  }
+
+  .small-btn:hover {
+    background-color: rgb(255, 255, 255, 0.25); /* show background color on hover */
+  }
+
 
 /* ---------- FOOTER ---------- */
 
