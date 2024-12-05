@@ -67,7 +67,6 @@ body.planets-page {
 
 /* ---------- PLANETARY SECTION ---------- */
 
-/* ---------- PLANETS SECTION ---------- */
 .planetary-sections {
   position: relative;
   width: 100%;
@@ -91,11 +90,11 @@ body.planets-page {
 }
 
 .left-planet {
-  left: -10%; /* Half outside the container */
+  left: -15%; /* Half outside the container */
 }
 
 .right-planet {
-  right: -10%; /* Half outside the container */
+  right: -15%; /* Half outside the container */
 }
 
 .planet img {
@@ -127,6 +126,7 @@ body.planets-page {
 }
 
 /* ---------- RESPONSIVENESS ---------- */
+
 @media (max-width: 960px) {
   .planet {
     width: 200px; /* Smaller size for medium screens */
