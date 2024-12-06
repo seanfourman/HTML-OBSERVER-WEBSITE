@@ -395,24 +395,21 @@
     text-decoration: none;
     padding-right: 50px;
   }
-
-  .satellink-video-section {
+  
+  .satellink-secondary-image video {
     position: absolute;
     top: 67.5%;
-    left: 100%;
-    width: 75%;
-    transform: translate(-50%, -50%);
-  }
-
-  .satellink-video-section video {
-    width: 40%;
+    right: 22.5%; /* DO NOT TOUCH */
+    transform: translate(50%, -50%); /* + for x, - for y -> go by + for x axis -> fixes the video position */
+    width: 30%;
+    max-width: 880px;
     height: auto;
   }
 
   /* video positioning abit scuffed when going under 1300px, not necessary but looks better */
   @media (max-width: 1300px) {
-    .satellink-secondary-install {
-        top: 60%;
+    .satellink-secondary-image video {
+        top: 72.5%;
       }
     }
 
@@ -464,169 +461,10 @@
         padding-right: 0px;
       }
     
-      .satellink-video-section {
+      .satellink-secondary-image video {
         display: none;
       }
   }
-
-/* ---------- 30 DAY TRIAL ---------- */
-
-.trial-container {
-    margin: 50px auto;
-    text-align: center;
-    max-width: 600px;
-    padding: 20px;
-}
-
-.trial-container h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin: 10px 0px;
-}
-
-.trial-container p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-}
-
-.trial-form {
-    margin: 20px 0;
-}
-
-.form-label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-.input-container {
-    display: flex;
-    border: 1px solid #555555;
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 15px;
-    margin-right: 20px;
-}
-
-input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: none;
-    outline: none;
-    background: #222222;
-    color: white;
-    font-size: 1rem;
-}
-
-.refresh-button {
-    background: #444;
-    border: none;
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.refresh-button span {
-    font-size: 1.2rem;
-}
-
-.order-button {
-    background: white;
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    text-transform: uppercase;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-}
-
-.order-button:hover {
-    background: #ddd;
-}
-
-.availability-link {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-top: 10px;
-    transition: opacity 0.3s ease;
-}
-
-.availability-link:hover {
-    opacity: 0.7;
-}
-
-
-.satellink-third-image {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background-image: url("/images/satellink-remote.webp");
-    background-size: cover; /* stretch to fit */
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.satellink-third-title {
-    position: absolute;
-    color: #ffffff;
-    top: 55%;
-    left: 45%;
-    width: 75%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-  }
-  
-  .satellink-third-title h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 0px;
-  }
-
-  .satellink-third-title p {
-    margin-top: 20px;
-    font-size: 1rem;
-  }
-
-  @media (max-width: 960px) {
-    .satellink-third-title {
-        width: 80%; /* needed for text spread adjustment */
-      }
-    
-      .satellink-third-title h1 {
-        font-size: 3rem;
-      }
-
-      .satellink-third-title p {
-        font-size: 0.9rem;
-      }
-  }
-
-  @media (max-width: 480px) {
-    .satellink-third-title {
-        width: 80%; /* needed for text spread adjustment */
-      }
-    
-      .satellink-third-title h1 {
-        font-size: 2.5rem;
-      }
-
-      .satellink-third-title p {
-        font-size: 0.8rem;
-      }
-  }
-
 
 /* ---------- IN-BOX BOXES ---------- */
 
@@ -695,3 +533,158 @@ input[type="text"] {
         margin: 0;
     }
 }
+
+/* ---------- THIRD IMAGE ---------- */
+
+.satellink-third-image {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url("/images/satellink-remote.webp");
+    background-size: cover; /* stretch to fit */
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.satellink-third-title {
+    position: absolute;
+    color: #ffffff;
+    top: 55%;
+    left: 45%;
+    width: 75%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+  
+  .satellink-third-title h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+  }
+
+  .satellink-third-title p {
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 960px) {
+    .satellink-third-title {
+        width: 80%; /* needed for text spread adjustment */
+      }
+    
+      .satellink-third-title h1 {
+        font-size: 3rem;
+      }
+
+      .satellink-third-title p {
+        font-size: 0.9rem;
+      }
+  }
+
+  @media (max-width: 480px) {
+    .satellink-third-title {
+        width: 80%; /* needed for text spread adjustment */
+      }
+    
+      .satellink-third-title h1 {
+        font-size: 2.5rem;
+      }
+
+      .satellink-third-title p {
+        font-size: 0.8rem;
+      }
+  }
+
+/* ---------- 30 DAY TRIAL ---------- */
+
+.trial-container {
+    margin: 40px auto;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+}
+
+.trial-container h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.trial-container p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.trial-form {
+    margin: 25px 0;
+}
+
+.form-label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.input-container {
+    display: flex;
+    border: 1px solid #555555;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: #222222;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.order-button {
+    background: #000000;
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.order-button:hover {
+    background: #aaaaaa;
+}
+
+.availability-link {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: opacity 0.3s ease;
+}
+
+.availability-link:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 960px) {
+    .trial-container p {
+        font-size: 0.9rem;
+      }
+  }
+
+@media (max-width: 480px) {
+    .order-button {
+        padding: 5px 5px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+  }
