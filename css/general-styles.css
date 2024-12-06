@@ -12,6 +12,12 @@ body {
     margin-top: 80px; /* take into consideration nav bar for 85px -> don't try to change this to 85px, you'll get brain damage */
   }
 
+  body.black-background {
+    background-color: #000000;
+    color: #ffffff;
+    overflow-x: hidden;
+  }
+
 /* make radio buttons invisible throughout all the website */
 input[type="radio"] {
     display: none;
