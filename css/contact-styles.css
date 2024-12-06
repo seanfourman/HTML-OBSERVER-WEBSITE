@@ -113,3 +113,15 @@
         max-width: 250px;
     }
 }
+
+/* ---------- SOCIAL MEDIA LINKS ---------- */
+
+.social-media-links {
+  text-align: center;
+  margin: 0px 0px 20px 0px;
+}
+
+.social-media-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
