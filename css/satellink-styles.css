@@ -112,6 +112,7 @@
     color: #ffffff;
     z-index: 1;
     transition: opacity 4s ease-in-out; /* fade in animation */
+    user-select: none; /* make text unselectable */
 }
 
 .satellink-button {
