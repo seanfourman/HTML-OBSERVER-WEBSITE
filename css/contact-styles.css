@@ -1,127 +1,127 @@
 /* ---------- CONTACT MAIN IMAGE ---------- */
 
 .contact-main-image {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-image: url("/images/contact.webp");
-    background-size: cover; /* stretch to fit */
-    background-position: center;
-  }
-
-  .contact-image-title {
-    position: absolute;
-    color: #ffffff;
-    top: 55%;
-    left: 45%;
-    width: 75%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .contact-image-title h1 {
-    font-size: 4.5rem;
-    font-weight: 700;
-    margin-bottom: 0px;
-  }
-
-  .contact-image-title p {
-    color: #b9b9bb;
-    line-height: 25px;
-  }
-
-  @media (max-width: 960px) {
-    .contact-image-title {
-      width: 80%; /* needed for paragraph text spread */
-      top: 50%; /* RECENTER TO MIDDLE */
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-    }
-  
-    .contact-image-title h1 {
-      font-size: 4rem;
-    }
-
-    .contact-image-title p {
-        line-height: 20px;
-      }
-  }
-  
-  @media (max-width: 480px) {
-    .contact-image-title {
-        width: 90%; /* needed for paragraph text spread */
-        top: 50%; /* RECENTER TO MIDDLE */
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-    }
-  
-    .contact-image-title h1 {
-      font-size: 3.5rem;
-    }
-  }
-
-/* ---------- CONTACT FORM ---------- */
-
-.contact-form {
-    max-width: 500px;
-    margin: 50px auto;
-    background: #000000;
-    padding: 30px 50px 30px 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(125, 125, 125, 0.25);
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("/images/contact.webp");
+  background-size: cover; /* stretch to fit */
+  background-position: center;
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
+.contact-image-title {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  width: 75%;
+  transform: translate(-50%, -50%); /* center the text */
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
+.contact-image-title h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0px;
 }
 
-.contact-btn {
-    background-color: #ed1c24;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-}
-
-/* fix 20px sway to left */
-.contact-btn-container {
-  margin-left: 20px;
+.contact-image-title p {
+  color: #b9b9bb;
+  line-height: 25px;
 }
 
 @media (max-width: 960px) {
-    .contact-form {
-        max-width: 400px;
+  .contact-image-title {
+    width: 80%; /* needed for paragraph text spread */
+
+    /* RECENTER TO MIDDLE */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .contact-image-title h1 {
+    font-size: 4rem;
+  }
+
+  .contact-image-title p {
+      font-size: 1.1rem;
+      line-height: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .contact-form {
-        max-width: 250px;
-    }
+  .contact-image-title {
+      width: 90%; /* needed for paragraph text spread */
+  }
+
+  .contact-image-title h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* ---------- CONTACT FORM ---------- */
+
+.contact-form {
+  max-width: 500px;
+  margin: 50px auto;
+  background: #000000;
+  padding: 30px 50px 30px 30px; /* add 20px on right for some reason */
+  border-radius: 5px; /* rounded corners */
+  box-shadow: 0 0 10px rgba(125, 125, 125, 0.25);
+}
+
+.contact-form label {
+  display: block; /* make the label take up the full width -> looks better than adding padding */
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%; /* textbox will stretch through all the box */
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  resize: none; /* disable resizing for Message */
+}
+
+.contact-btn {
+  background-color: #ed1c24;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem; /* make button reasonable size for this form */
+
+  /* center the button */
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* fix 20px button sway to left */
+.contact-btn-container {
+margin-left: 20px;
+}
+
+@media (max-width: 960px) {
+  .contact-form {
+      max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+      max-width: 250px;
+  }
 }
 
 /* ---------- SOCIAL MEDIA LINKS ---------- */
 
 .social-media-links {
-  text-align: center;
-  margin: 0px 0px 20px 0px;
+text-align: center;
+margin: 0px 0px 20px 0px;
 }
 
 .social-media-links a {
-  margin: 0 10px;
-  display: inline-block;
+margin: 0 10px;
+display: inline-block;
 }
