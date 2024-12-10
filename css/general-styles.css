@@ -185,3 +185,35 @@ input[type="radio"] {
     flex-direction: column; /* put text and logo in the same column, one under the another */
   }
 }
+
+/* ---------- RETURN TO TOP ---------- */
+
+#return-to-top {
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  background-color: lightgray;
+  text-align: center;
+  padding: 7px;
+  vertical-align: middle;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  border-radius: 100%;
+}
+
+#return-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#return-to-top:hover {
+  background-color: rgb(175, 175, 175);
+}
+
+#return-to-top img {
+  width: 20px;
+  height: 20px;
+}
