@@ -19,16 +19,17 @@
 .main-image-title h1 {
   font-size: 4.5rem;
   letter-spacing: 10px;
-  font-weight: 700;
 }
 
 /* text goes to center, looks better for mobile */
 @media (max-width: 960px) {
   .main-image-title {
     width: 80%; /* needed for paragraph text spread */
-    top: 50%; /* RECENTER TO MIDDLE */
+     /* RECENTER TO MIDDLE */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
     text-align: center;
   }
 
@@ -49,25 +50,12 @@
     width: 100%; /* needed for text spread adjustment */
   }
 
-  .main-image-title h1 {
-    margin-bottom: 0px;
-    font-size: 7.5rem;
-    letter-spacing: 5px;
-  }
-
   .main-image-title p {
-    margin-top: 0px;
     font-size: 1.1rem;
   }
 }
 
 /* ---------- MAIN IMAGE -> BUTTON ---------- */
-
-/*
-.main-image-title a {
-  background-color: #ED1C24;
-}
-*/
 
 .main-image-btn {
   background-color: #ed1c24;
@@ -78,11 +66,14 @@
 .main-articles {
   position: absolute;
   bottom: 5%;
+  
+  /* mayber better to just use width if possible? need to check */
   left: 5%;
   right: 5%;
+
   display: flex;
   justify-content: space-around;
-  text-align: center;
+  text-align: center; /* needed for author names */
 }
 
 .article-title {
@@ -93,8 +84,9 @@
 
 .link-title {
   font-weight: 700;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .link-title:hover {
@@ -116,10 +108,9 @@
 /* ---------- FEATURED ARTICLES ---------- */
 
 /* FEATURED ARTICLES -> TITLES */
-
 .featured-header {
   display: flex;
-  justify-content: space-between; /* move both to opposite ends, right and left */
+  justify-content: space-between; /* move both to opposite ends */
   align-items: center; /* center for y axis */
   width: 75%;
   margin: 50px auto;
@@ -127,7 +118,6 @@
 
 .featured-header h2 {
   font-size: 3rem;
-  font-weight: 700;
   margin: 0;
 }
 
@@ -142,22 +132,19 @@
   opacity: 0.65;
 }
 
-/* when going under large screen (desktop) sizes, make the articles on the main image section disappear */
 @media (max-width: 960px) {
   .featured-header {
     width: 100%;
-    justify-content: center; /* move to center for mobile */
+    justify-content: center; /* move to center for tablets, mobile */
   }
 
-  .featured-header h2 {
-    font-size: 3rem;
-  }
-
+  /* more articles text will disappear under 960px */
   .more-link {
     display: none;
   }
 }
 
+/* looks good all the way to iPhone SE, don't think we should make this any smaller */
 @media (max-width: 480px) {
   .featured-header h2 {
     font-size: 2.5rem;
@@ -168,51 +155,37 @@
 
 .featured-articles {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* span for 2, span for 1 and 1 */
+  grid-template-columns: 2fr 1fr 1fr; /* span for 2 for large, span for 1 for both small */
   /* grid-template-rows: auto auto; */
-  grid-template-rows: repeat(2, 1fr); /* 2x2 grid */
+  /* grid-template-rows: repeat(2, 1fr); /* 2x2 grid */
+  margin: 0 auto;
   gap: 20px;
   width: 75%;
-  margin: 0 auto;
 }
 
+/* make all articles the same height -> DO NOT TOUCH */
 .featured-articles .featured-card,
 .featured-articles .featured-card img {
   height: 100%;
 }
 
 .featured-article.large {
-  /* you might ask yourself why these are opposite, right? i have literally no clue */
-  grid-column: 1 / 2; /* three columns */
-  grid-row: 1 / 3; /* two rows */
-}
+  /* you might ask yourself why these are opposite, right? i have literally no clue but it works */
+  /* [-> HERE] read this I added somewhat of an explanation for you */
 
-.featured-article.small {
-  grid-column: auto;
-  grid-row: auto;
+  grid-column: 1 / 2; /* from START of first column to START of second column -> means this will take ONLY ONE COLUMN in width */
+  grid-row: 1 / 3; /* from START of first row to START of third row -> means this will take TWO ROWS in height */
 }
 
 @media (max-width: 960px) {
   .featured-articles {
-    grid-template-columns: 1fr; /* force all articles to go in a single column for mobile */
-    grid-template-rows: auto; /* calculate amount of needed rows based on amount of items in column */
-    gap: 15px;
+    grid-template-columns: 1fr; /* all articles to go in a single column for tablets, mobile */
+    gap: 20px;
     width: 85%;
-  }
-
-  .featured-article.large,
-  .featured-article.small {
-    grid-column: span 1; /* Full-width for each article */
-    grid-row: span 1; /* Each in its own row */
   }
 }
 
 /* FEATURED ARTICLES -> CARD TITLES AND TEXT */
-
-.featured-content {
-  width: 100%;
-}
-
 .featured-card {
   position: relative;
   overflow: hidden; /* stop text and background from getting out of the div */
@@ -229,10 +202,10 @@
 
 .featured-content {
   position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  bottom: 0%;
+  background: rgba(0, 0, 0, 0.35);
   color: #ffffff;
-  width: 100%;
+  width: 100%; /* stretch background through all of the card, regardless of when the text ends */
   padding: 0px 10px;
 }
 
@@ -244,7 +217,6 @@
 .featured-article h1 {
   width: 90%;
   font-size: 1rem;
-  font-weight: 700;
 }
 
 .featured-article.large h1 {
@@ -260,23 +232,25 @@
   background-image: url("/images/earth2.webp");
   background-size: cover; /* stretch to fit */
   background-position: center;
-  margin-top: 50px;
+  margin-top: 70px; /* maybe less? need to check later */
 }
 
 .secondary-image-title {
   position: absolute;
   width: 65%;
   color: #ffffff;
+
+  /* CENTER TO MIDDLE */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  
   text-align: center;
 }
 
 .secondary-image-title h1 {
   margin: 0px;
   font-size: 4.5rem;
-  font-weight: 700;
 }
 
 .secondary-image-btn {
@@ -289,13 +263,11 @@
   }
 
   .secondary-image-title h1 {
-    margin-bottom: 0px;
     font-size: 3.5rem;
   }
 
   .secondary-image-title p {
     margin-top: 0px;
-    font-size: 1rem;
   }
 }
 
@@ -312,56 +284,50 @@
 /* ---------- LEARN MORE SECTION ---------- */
 
 /* LEARN MORE -> TITLES */
-
 .learn-more {
   text-align: center;
   margin-top: 40px;
 }
 
 .learn-more p {
-  font-size: 12px;
+  margin-bottom: 5px;
+  /*font-size: 12px;*/ /* looks abit unreadable on 4K screens, probably should leave this out */
 }
 
 .learn-more h1 {
-  margin-top: 0px;
-  margin-bottom: 40px;
+  margin: 0px 0px 40px 0px;
   font-size: 3rem;
-  font-weight: 700;
 }
 
 /* LEARN MORE -> CARDS */
-
 .topic-card-main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
   gap: 20px;
   width: 90%;
   margin: 0 auto;
 }
 
-.topic-card {
-  overflow: hidden; /* make zoom in effect stay inside the card */
-  position: relative; /* all elements inside the card will stay inside */
-  transition: transform 0.3s ease-in-out;
+.image-overflow {
+  height: 500px; /* block card scale in by making the height the same as the topic-image, makes a cool zoom-in effect on the image */
+  overflow: hidden;
 }
 
-.topic-card:hover .topic-image {
-  transform: scale(1.055); /* Zoom in slightly */
+.image-overflow:hover .topic-image {
+  transform: scale(1.075);
 }
 
 .topic-image {
   width: 100%;
   height: 500px;
   object-fit: cover; /* keep original aspect ratio, fill container */
-  object-position: center;
   transition: transform 0.3s ease-in-out;
 }
 
 .topic-card h2 {
   font-size: 1rem;
-  font-weight: 700;
   color: #000000;
-  margin: 10px;
+  margin: 20px 30px 0px 30px; /* make the border-top line smaller than the length of the image */
   padding-top: 10px;
   border-top: 2px solid #eeeeee;
 }
@@ -378,8 +344,11 @@
   }
 
   .topic-image {
-    height: auto; /* Adjust height dynamically for smaller screens */
-    max-height: 150px; /* Optional: Limit max height on small devices */
+    max-height: 150px;
+  }
+  
+  .image-overflow {
+    height: 150px; /* resize "zoom-in (block) effect" for tablet, mobile */
   }
 }
 
@@ -399,11 +368,13 @@
   position: absolute;
   width: 80%;
   color: #ffffff;
+
+  /* CENTER TO MIDDLE */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
   text-align: center;
-  font-weight: 700;
 }
 
 .third-image-title h1 {
@@ -412,6 +383,7 @@
 }
 
 .third-image-title p {
+  font-weight: 700;
   margin-bottom: 20px;
 }
 

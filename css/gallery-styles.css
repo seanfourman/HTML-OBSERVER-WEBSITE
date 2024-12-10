@@ -15,13 +15,12 @@
     top: 50%;
     left: 50%;
     width: 75%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* center the text */
     text-align: center;
   }
   
   .gallery-image-title h1 {
     font-size: 4.5rem;
-    font-weight: 700;
     margin-bottom: 0px;
   }
 
@@ -32,7 +31,6 @@
   
     .gallery-image-title h1 {
       font-size: 7rem;
-      margin-bottom: 0px;
     }
   
     .gallery-image-title p {
@@ -43,17 +41,11 @@
   
   @media (max-width: 480px) {
     .gallery-image-title {
-      width: 90%; /* needed for text spread adjustment ggugygygu */
+      width: 90%; /* needed for text spread adjustment */
     }
   
     .gallery-image-title h1 {
       font-size: 5rem;
-      letter-spacing: 5px;
-    }
-  
-    .gallery-image-title p {
-      margin-top: 0px;
-      font-size: 1.1rem;
     }
   }
 
@@ -65,11 +57,11 @@
     grid-template-rows: repeat(5, auto); /* 5 rows, auto for amount of rows used */
     gap: 20px;
     width: 90%;
-    margin: 50px auto;
+    margin: 50px auto; /* fix x, y axes */
   }
   
   .photo-container {
-    position: relative; /* position text relative to the container */
+    position: relative; /* position the text relative to the container (the photo div) */
     overflow: hidden; /* make text stay within the container */
     width: 100%;
     height: 350px; /* SET SPECIFIC HEIGHT FOR ALL IMAGES, MAYBE CHANGE LATER */
@@ -77,28 +69,29 @@
   
   .photo-container img {
     width: 100%;
-    height: 100%;
-    object-fit: cover; /* Keeps image aspect ratio */
-    display: block;
+    height: 100%; /* fix weird image spacing when going to mobile, tablet -> DO NOT TOUCH */
+    object-fit: cover; /* keep image aspect ratio, looks distorted otherwise */
   }
   
   .photo-text {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-    color: #fff;
+    bottom: 0%;
+
+    /* cool trick to center the text instead of using transform: translate */
+    left: 0%;
+    right: 0%;
+
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
     text-align: center;
     padding: 10px;
-    font-size: 1rem;
-    opacity: 0; /* start with 0 opacity to be hidden */
+    opacity: 0; /* start with 0 opacity to be hidden when not hovering */
     transition: opacity 0.3s ease;
   }
   
   .photo-container:hover .photo-text {
     opacity: 1;
-  }  
+  }
 
   @media (max-width: 960px) {
     .photo-gallery {

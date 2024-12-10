@@ -1,10 +1,7 @@
-/* ---------- SATELLITE ---------- */
-
-/* SATELLITE -> MAIN IMAGE */
+/* ---------- SATELLINK MAIN IMAGE ---------- */
 
 .satellink-main-image {
     position: relative;
-    width: 100%;
     height: 500px;
     background-image: url("/images/satellink.webp");
     background-size: cover; /* stretch to fit */
@@ -14,30 +11,32 @@
     align-items: center;
 }
 
-/* SATELLITE -> ANIMATION */
-
+/* SATELLINK -> ANIMATION */
 .circle-card {
     position: relative;
     width: 300px;
     height: 300px;
-    border-radius: 50%;
+    border-radius: 50%; /* make perfect circle */
     background: linear-gradient(45deg, #948c84, #8c8d9a, #a7a5ac, #828a9c);
-    /*background: linear-gradient(45deg, #2c3e50, #4b79a1, #283e51, #0f2027);*/
-    transform-style: preserve-3d;
-    transition: all 1s ease-in-out;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid rgba(255, 255, 255, 0.5);
+
+    /* css "satellite" animation */
+    transform-style: preserve-3d; /* child elements of the element - > will retain 3D position in the space */
+    transition: all 1s ease-in-out;
 }
 
+/* SATELLINK -> CSS "SATELLITE" ANIMATION */
 .circle {
-    border-radius: 50%;
     position: absolute;
+    border-radius: 50%;
     background: linear-gradient(#bdc3c7, #2c3e50);
     box-shadow: -5px 5px 10px #00000033;
     transition: all 1s ease-in-out;
-    opacity: 0;
+    opacity: 0; /* default to be hidden */
 }
 
 .circle:nth-child(1) {
@@ -104,58 +103,50 @@
     transition: opacity 1s ease-in-out; /* fade out animation */
 }
 
+/* SATELLINK -> MAIN TITLE */
 .satellink-title {
     position: absolute;
+
+    /* CENTER TEXT */
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+
     font-size: 5.5rem;
-    color: #ffffff;
-    z-index: 1;
+    z-index: 1; /* put text above other elements -> be above the animation */
     transition: opacity 4s ease-in-out; /* fade in animation */
     user-select: none; /* make text unselectable */
-}
-
-.satellink-button {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #ffffff;
-    transition: opacity 4s ease-in-out; /* fade in animation */
 }
 
 .satellink-main-image p {
     position: absolute;
     width: 100%;
+
+    /* CENTER TEXT */
     top: 87.5%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #ffffff;
+
     font-size: 0.75rem;
-    font-weight: 400;
 }
 
 .satellink-image-btn {
     position: absolute;
+
+    /* CENTER BUTTON */
     top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 @media (max-width: 960px) {
     .satellink-title {
-        top: 35%;
+        top: 35%; /* recenter the title to still be on top of the animation */
         font-size: 4.5rem;
     }
 
+    /* CSS "SATELLITE" ANIMATION RESPONSIVITY */
     .circle-card {
         width: 250px;
         height: 250px;
@@ -192,6 +183,7 @@
         font-size: 3.5rem;
     }
 
+    /* CSS "SATELLITE" ANIMATION RESPONSIVITY */
     .satellink-subtitle {
         font-size: 1rem;
     }
@@ -231,7 +223,7 @@
 /* ---------- 3 BOXES ---------- */
 
 .three-box-container {
-    display: flex;
+    display: flex; /* make 3 divs go into the same row */
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -240,9 +232,8 @@
 }
 
 .box {
-    flex: 1;
+    flex: 1; /* center the boxes, works with justify-content -> DO NOT TOUCH */
     padding: 50px 0px; /* use this and the margin in the box-container to keep space around the borders */
-    position: relative;
 }
 
 .box:first-child {
@@ -275,8 +266,7 @@
 
 @media (max-width: 960px) {
     .three-box-container {
-        flex-direction: column; /* Stack boxes vertically */
-        gap: 20px;
+        flex-direction: column; /* move boxes to a single column for tablets, mobile */
     }
 
     .box:first-child, .box:last-child {
@@ -284,7 +274,7 @@
     }
 
     .box p {
-        font-size: 1rem;
+        font-size: 1rem; /* make font bigger, easier to read */
         margin: 0;
     }
 }
@@ -293,29 +283,26 @@
 
 .satellink-secondary-image {
     position: relative;
-    width: 100%;
     height: 800px;
     background-image: url("/images/satellink-home.webp");
     background-size: cover; /* stretch to fit */
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .satellink-secondary-title {
     position: absolute;
-    color: #ffffff;
+
+    /* CENTER TEXT */
     top: 32.5%;
     left: 50%;
-    width: 75%;
     transform: translate(-50%, -50%);
+    
     text-align: center;
+    width: 75%;
   }
   
   .satellink-secondary-title h1 {
     font-size: 4.5rem;
-    font-weight: 700;
     margin-bottom: 0px;
   }
 
@@ -356,7 +343,6 @@
 
   .satellink-secondary-install {
     position: absolute;
-    color: #ffffff;
     top: 65%;
     left: 45%;
     width: 75%;
@@ -366,26 +352,21 @@
   
   .satellink-secondary-install h1 {
     font-size: 3rem;
-    font-weight: 700;
     margin-bottom: 0px;
   }
 
   .satellink-secondary-install p {
     margin: 20px 0px;
-    font-size: 1rem;
   }
 
   .satellink-secondary-install h2 {
     font-size: 2rem;
-    font-weight: 700;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    margin: 10px 0px 0px 0px;
     padding-left: 10px;
     border-left: 2px solid #555555;
   }
 
   .download-links {
-    display: flex;
     font-size: 0.75rem;
     font-weight: 700;
   }
@@ -398,8 +379,10 @@
   
   .satellink-secondary-image video {
     position: absolute;
+
+    /* DO NOT TOUCH -> took me two hours to get this to this point, it works, just leave it */
     top: 67.5%;
-    right: 22.5%; /* DO NOT TOUCH */
+    right: 22.5%;
     transform: translate(50%, -50%); /* + for x, - for y -> go by + for x axis -> fixes the video position */
     width: 30%;
     max-width: 880px;
@@ -415,52 +398,32 @@
 
   @media (max-width: 960px) {
     .satellink-secondary-install {
-        position: absolute;
-        color: #ffffff;
-        top: 65%;
+        /* RECENTER TEXT */
         left: 50%;
-        width: 95%;
-        transform: translate(-50%, -50%);
         text-align: center;
+
+        width: 95%;
       }
       
       .satellink-secondary-install h1 {
         font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 0px;
       }
     
       .satellink-secondary-install p {
         margin: 10px 0px;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
       }
     
       .satellink-secondary-install h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-top: 10px;
-        margin-bottom: 0px;
         border: none;
       }
-    
-      .download-links {
-        display: flex;
-        justify-content: center;
-        text-align: center;
-        font-size: 0.75rem;
-        font-weight: 700;
-      }      
-    
-      .download-links a {
-        color: white;
-        text-decoration: none;
-        padding-right: 50px;
-      }
 
+      /* account for the right padding of the second text (child), it off-centers the text */
       .download-links a:nth-child(2) {
         padding-right: 0px;
       }
     
+      /* video will not be displayed under 960px */
       .satellink-secondary-image video {
         display: none;
       }
@@ -488,9 +451,8 @@
 }
 
 .in-box {
-    flex: 1;
+    flex: 1; /* center the boxes, works with justify-content -> DO NOT TOUCH */
     padding: 0px 0px; /* use this and the margin in the box-container to keep space around the borders */
-    position: relative;
     border-right: 2px solid #555555;
 }
 
@@ -505,12 +467,6 @@
 .inbox-icon img {
     width: 150px;
     height: 150px;
-    object-fit: contain;
-}
-
-.in-box h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
 }
 
 .in-box p {
@@ -520,8 +476,8 @@
 
 @media (max-width: 960px) {
     .inbox-container {
-        flex-direction: column; /*put boxes vertically */
-        gap: 75px;
+        flex-direction: column; /* put boxes vertically in a column */
+        gap: 30px;
     }
 
     .in-box {
@@ -530,7 +486,6 @@
 
     .in-box p {
         font-size: 1rem;
-        margin: 0;
     }
 }
 
@@ -538,19 +493,14 @@
 
 .satellink-third-image {
     position: relative;
-    width: 100%;
     height: 400px;
     background-image: url("/images/satellink-remote.webp");
     background-size: cover; /* stretch to fit */
     background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .satellink-third-title {
     position: absolute;
-    color: #ffffff;
     top: 55%;
     left: 45%;
     width: 75%;
@@ -560,22 +510,16 @@
   
   .satellink-third-title h1 {
     font-size: 3rem;
-    font-weight: 700;
     margin-bottom: 0px;
   }
 
   .satellink-third-title p {
     margin-top: 20px;
-    font-size: 1rem;
   }
 
   @media (max-width: 960px) {
     .satellink-third-title {
         width: 80%; /* needed for text spread adjustment */
-      }
-    
-      .satellink-third-title h1 {
-        font-size: 3rem;
       }
 
       .satellink-third-title p {
@@ -584,16 +528,8 @@
   }
 
   @media (max-width: 480px) {
-    .satellink-third-title {
-        width: 80%; /* needed for text spread adjustment */
-      }
-    
       .satellink-third-title h1 {
         font-size: 2.5rem;
-      }
-
-      .satellink-third-title p {
-        font-size: 0.8rem;
       }
   }
 
@@ -602,13 +538,12 @@
 .trial-container {
     margin: 40px auto;
     text-align: center;
-    max-width: 600px;
+    max-width: 600px; /* use max here not regulat width, looks better */
     width: 90%;
 }
 
 .trial-container h1 {
     font-size: 2.5rem;
-    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -623,7 +558,6 @@
 
 .form-label {
     display: block;
-    font-size: 1rem;
     margin-bottom: 10px;
     text-align: left;
 }
@@ -631,18 +565,16 @@
 .input-container {
     display: flex;
     border: 1px solid #555555;
-    overflow: hidden;
     margin-bottom: 15px;
 }
 
 input[type="text"] {
-    flex: 1;
+    flex: 1; /* take up all the space */
     padding: 10px;
     border: none;
-    outline: none;
+    outline: none; /* remove outline when clicking on the box */
+    color: #ffffff; /* input text will be white */
     background: #222222;
-    color: #ffffff;
-    font-size: 1rem;
 }
 
 .order-button {
@@ -651,8 +583,8 @@ input[type="text"] {
     border: 1px solid white;
     padding: 10px 20px;
     font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
+    font-weight: 700;
+    cursor: pointer; /* button like behavior */
     transition: background 0.3s ease;
 }
 
@@ -661,7 +593,6 @@ input[type="text"] {
 }
 
 .availability-link {
-    display: inline-block;
     color: #ffffff;
     text-decoration: none;
     font-size: 0.8rem;
@@ -683,8 +614,5 @@ input[type="text"] {
     .order-button {
         padding: 5px 5px;
         font-size: 0.8rem;
-        font-weight: bold;
-        cursor: pointer;
-        transition: background 0.3s ease;
     }
   }
