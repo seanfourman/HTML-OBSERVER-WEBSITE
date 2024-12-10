@@ -186,22 +186,20 @@ input[type="radio"] {
   }
 }
 
-/* ---------- RETURN TO TOP ---------- */
+/* ---------- RETURN TO TOP JS ---------- */
 
 #return-to-top {
   display: flex;
   position: fixed;
   bottom: 50px;
   right: 10px;
-  background-color: lightgray;
-  text-align: center;
+  background-color: #cccccc;
   padding: 7px;
-  vertical-align: middle;
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  border-radius: 100%;
+  transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+  border-radius: 50%; /* make circle */
 }
 
 #return-to-top.visible {
@@ -210,7 +208,7 @@ input[type="radio"] {
 }
 
 #return-to-top:hover {
-  background-color: rgb(175, 175, 175);
+  background-color: #bbbbbb;
 }
 
 #return-to-top img {

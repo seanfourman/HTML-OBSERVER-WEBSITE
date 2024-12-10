@@ -1,12 +1,12 @@
-const returnToTopButton = document.getElementById("return-to-top");
+const returnToTopButton = document.getElementById("return-to-top"); // need to use defer in script tag to make sure this is available
 
 if (returnToTopButton) {
-  // Scroll to top behavior
+  // scroll to top behavior
   returnToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // Scroll event listener
+  // scroll event listener
   document.addEventListener("scroll", () => {
     toggleReturnToTop(window.scrollY > 100);
   });
