@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: 500px;
-  background-image: url("/images/about.webp");
+  background-image: url("../images/about.webp");
   background-size: cover; /* stretch the image to fit */
   background-position: center;
 }
@@ -52,72 +52,72 @@
 /* ---------- 3 INFORMATION BUTTONS ---------- */
 
 .button-container {
-margin: 20px 0;
-text-align: center;
+  margin: 20px 0;
+  text-align: center;
 }
 
 .button-container label {
-display: inline-block; /* inline-block is the only thing that works with the responsivity stuff, i have no clue why */
-padding: 10px 50px;
-font-size: 1.3rem;
-font-weight: 700;
-border-bottom: 2px solid #dddddd;
-cursor: pointer; /* change cursor to pointer to resemble an actual button */
-transition: border-bottom 0.2s ease-in;
+  display: inline-block; /* inline-block is the only thing that works with the responsivity stuff, i have no clue why */
+  padding: 10px 50px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-bottom: 2px solid #dddddd;
+  cursor: pointer; /* change cursor to pointer to resemble an actual button */
+  transition: border-bottom 0.2s ease-in;
 }
 
 .button-container label:hover {
-border-bottom: 2px solid #ed1c24;
+  border-bottom: 2px solid #ed1c24;
 }
 
 /* keep the selected category marked in red */
 #button1:checked + label,
 #button2:checked + label,
 #button3:checked + label {
-border-bottom: 2px solid #ed1c24;
+  border-bottom: 2px solid #ed1c24;
 }
 
 .info-paragraph {
-display: none; /* default to hide the information text in the paragraphs */
-margin: 50px 0;
-line-height: 25px;
+  display: none; /* default to hide the information text in the paragraphs */
+  margin: 50px 0;
+  line-height: 25px;
 }
 
 /* follow what radio button is pressed and use it to hide other information paragraphs */
 #button1:checked ~ .info-paragraph-container #paragraph1,
 #button2:checked ~ .info-paragraph-container #paragraph2,
 #button3:checked ~ .info-paragraph-container #paragraph3 {
-display: block;
+  display: block;
 }
 
 .info-paragraph-link {
-font-weight: 700;
-/*text-decoration: none;*/
-color: #ed1c24;
+  font-weight: 700;
+  /*text-decoration: none;*/
+  color: #ed1c24;
 }
 
 @media (max-width: 960px) {
-.button-container label {
-  padding: 10px 20px;
-  font-size: 1rem;
-}
+  .button-container label {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 
-.info-paragraph {
-  margin: 30px 0;
-}
+  .info-paragraph {
+    margin: 30px 0;
+  }
 }
 
 @media (max-width: 480px) {
-.button-container {
-  padding: 0 20px;
-}
+  .button-container {
+    padding: 0 20px;
+  }
 
-.button-container label {
-  display: block; /* stack on top of each other for small screens and such */
-  margin: 10px 0;
-}
+  .button-container label {
+    display: block; /* stack on top of each other for small screens and such */
+    margin: 10px 0;
+  }
 
-.info-paragraph {
-  margin: 20px 0;
-}
+  .info-paragraph {
+    margin: 20px 0;
+  }
 }

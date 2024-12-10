@@ -1,618 +1,618 @@
 /* ---------- SATELLINK MAIN IMAGE ---------- */
 
 .satellink-main-image {
-    position: relative;
-    height: 500px;
-    background-image: url("/images/satellink.webp");
-    background-size: cover; /* stretch to fit */
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  height: 500px;
+  background-image: url("../images/satellink.webp");
+  background-size: cover; /* stretch to fit */
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* SATELLINK -> ANIMATION */
 .circle-card {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; /* make perfect circle */
-    background: linear-gradient(45deg, #948c84, #8c8d9a, #a7a5ac, #828a9c);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%; /* make perfect circle */
+  background: linear-gradient(45deg, #948c84, #8c8d9a, #a7a5ac, #828a9c);
+  border: 2px solid rgba(255, 255, 255, 0.5);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    /* css "satellite" animation */
-    transform-style: preserve-3d; /* child elements of the element - > will retain 3D position in the space */
-    transition: all 1s ease-in-out;
+  /* css "satellite" animation */
+  transform-style: preserve-3d; /* child elements of the element - > will retain 3D position in the space */
+  transition: all 1s ease-in-out;
 }
 
 /* SATELLINK -> CSS "SATELLITE" ANIMATION */
 .circle {
-    position: absolute;
-    border-radius: 50%;
-    background: linear-gradient(#bdc3c7, #2c3e50);
-    box-shadow: -5px 5px 10px #00000033;
-    transition: all 1s ease-in-out;
-    opacity: 0; /* default to be hidden */
+  position: absolute;
+  border-radius: 50%;
+  background: linear-gradient(#bdc3c7, #2c3e50);
+  box-shadow: -5px 5px 10px #00000033;
+  transition: all 1s ease-in-out;
+  opacity: 0; /* default to be hidden */
 }
 
 .circle:nth-child(1) {
-    width: 250px;
-    height: 250px;
-    transition-delay: 0.1s;
+  width: 250px;
+  height: 250px;
+  transition-delay: 0.1s;
 }
 
 .circle:nth-child(2) {
-    width: 200px;
-    height: 200px;
-    transition-delay: 0.2s;
+  width: 200px;
+  height: 200px;
+  transition-delay: 0.2s;
 }
 
 .circle:nth-child(3) {
-    width: 150px;
-    height: 150px;
-    transition-delay: 0.3s;
+  width: 150px;
+  height: 150px;
+  transition-delay: 0.3s;
 }
 
 .circle:nth-child(4) {
-    width: 100px;
-    height: 100px;
-    transition-delay: 0.4s;
+  width: 100px;
+  height: 100px;
+  transition-delay: 0.4s;
 }
 
 .circle:nth-child(5) {
-    width: 50px;
-    height: 50px;
-    transition-delay: 0.5s;
+  width: 50px;
+  height: 50px;
+  transition-delay: 0.5s;
 }
 
 .circle-card:hover {
-    transform: rotate3d(1, 1, 0, 60deg);
+  transform: rotate3d(1, 1, 0, 60deg);
 }
 
 .circle-card:hover .circle:nth-child(1) {
-    transform: translate3d(0, 0, 30px);
-    opacity: 1;
+  transform: translate3d(0, 0, 30px);
+  opacity: 1;
 }
 
 .circle-card:hover .circle:nth-child(2) {
-    transform: translate3d(0, 0, 60px);
-    opacity: 1;
+  transform: translate3d(0, 0, 60px);
+  opacity: 1;
 }
 
 .circle-card:hover .circle:nth-child(3) {
-    transform: translate3d(0, 0, 90px);
-    opacity: 1;
+  transform: translate3d(0, 0, 90px);
+  opacity: 1;
 }
 
 .circle-card:hover .circle:nth-child(4) {
-    transform: translate3d(0, 0, 120px);
-    opacity: 1;
+  transform: translate3d(0, 0, 120px);
+  opacity: 1;
 }
 
 .circle-card:hover .circle:nth-child(5) {
-    transform: translate3d(0, 0, 150px);
-    opacity: 1;
+  transform: translate3d(0, 0, 150px);
+  opacity: 1;
 }
 
 .circle-card:hover .satellink-title {
-    opacity: 0;
-    transition: opacity 1s ease-in-out; /* fade out animation */
+  opacity: 0;
+  transition: opacity 1s ease-in-out; /* fade out animation */
 }
 
 /* SATELLINK -> MAIN TITLE */
 .satellink-title {
-    position: absolute;
+  position: absolute;
 
-    /* CENTER TEXT */
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  /* CENTER TEXT */
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
-    font-size: 5.5rem;
-    z-index: 1; /* put text above other elements -> be above the animation */
-    transition: opacity 4s ease-in-out; /* fade in animation */
-    user-select: none; /* make text unselectable */
+  font-size: 5.5rem;
+  z-index: 1; /* put text above other elements -> be above the animation */
+  transition: opacity 4s ease-in-out; /* fade in animation */
+  user-select: none; /* make text unselectable */
 }
 
 .satellink-main-image p {
-    position: absolute;
-    width: 100%;
+  position: absolute;
+  width: 100%;
 
-    /* CENTER TEXT */
-    top: 87.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+  /* CENTER TEXT */
+  top: 87.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 
-    font-size: 0.75rem;
+  font-size: 0.75rem;
 }
 
 .satellink-image-btn {
-    position: absolute;
+  position: absolute;
 
-    /* CENTER BUTTON */
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  /* CENTER BUTTON */
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (max-width: 960px) {
-    .satellink-title {
-        top: 35%; /* recenter the title to still be on top of the animation */
-        font-size: 4.5rem;
-    }
+  .satellink-title {
+    top: 35%; /* recenter the title to still be on top of the animation */
+    font-size: 4.5rem;
+  }
 
-    /* CSS "SATELLITE" ANIMATION RESPONSIVITY */
-    .circle-card {
-        width: 250px;
-        height: 250px;
-    }
+  /* CSS "SATELLITE" ANIMATION RESPONSIVITY */
+  .circle-card {
+    width: 250px;
+    height: 250px;
+  }
 
-    .circle:nth-child(1) {
-        width: 200px;
-        height: 200px;
-    }
+  .circle:nth-child(1) {
+    width: 200px;
+    height: 200px;
+  }
 
-    .circle:nth-child(2) {
-        width: 160px;
-        height: 160px;
-    }
+  .circle:nth-child(2) {
+    width: 160px;
+    height: 160px;
+  }
 
-    .circle:nth-child(3) {
-        width: 120px;
-        height: 120px;
-    }
+  .circle:nth-child(3) {
+    width: 120px;
+    height: 120px;
+  }
 
-    .circle:nth-child(4) {
-        width: 80px;
-        height: 80px;
-    }
+  .circle:nth-child(4) {
+    width: 80px;
+    height: 80px;
+  }
 
-    .circle:nth-child(5) {
-        width: 40px;
-        height: 40px;
-    }
+  .circle:nth-child(5) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
-    .satellink-title {
-        font-size: 3.5rem;
-    }
+  .satellink-title {
+    font-size: 3.5rem;
+  }
 
-    /* CSS "SATELLITE" ANIMATION RESPONSIVITY */
-    .satellink-subtitle {
-        font-size: 1rem;
-    }
+  /* CSS "SATELLITE" ANIMATION RESPONSIVITY */
+  .satellink-subtitle {
+    font-size: 1rem;
+  }
 
+  .circle-card {
+    width: 200px;
+    height: 200px;
+  }
 
-    .circle-card {
-        width: 200px;
-        height: 200px;
-    }
+  .circle:nth-child(1) {
+    width: 160px;
+    height: 160px;
+  }
 
-    .circle:nth-child(1) {
-        width: 160px;
-        height: 160px;
-    }
+  .circle:nth-child(2) {
+    width: 120px;
+    height: 120px;
+  }
 
-    .circle:nth-child(2) {
-        width: 120px;
-        height: 120px;
-    }
+  .circle:nth-child(3) {
+    width: 90px;
+    height: 90px;
+  }
 
-    .circle:nth-child(3) {
-        width: 90px;
-        height: 90px;
-    }
+  .circle:nth-child(4) {
+    width: 60px;
+    height: 60px;
+  }
 
-    .circle:nth-child(4) {
-        width: 60px;
-        height: 60px;
-    }
-
-    .circle:nth-child(5) {
-        width: 30px;
-        height: 30px;
-    }
+  .circle:nth-child(5) {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 /* ---------- 3 BOXES ---------- */
 
 .three-box-container {
-    display: flex; /* make 3 divs go into the same row */
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    margin: 20px 0px; /* keep this at 20px so the line will stop before the ends */
-    text-align: center;
+  display: flex; /* make 3 divs go into the same row */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 20px 0px; /* keep this at 20px so the line will stop before the ends */
+  text-align: center;
 }
 
 .box {
-    flex: 1; /* center the boxes, works with justify-content -> DO NOT TOUCH */
-    padding: 50px 0px; /* use this and the margin in the box-container to keep space around the borders */
+  flex: 1; /* center the boxes, works with justify-content -> DO NOT TOUCH */
+  padding: 50px 0px; /* use this and the margin in the box-container to keep space around the borders */
 }
 
 .box:first-child {
-    border-right: 2px solid #555555;
+  border-right: 2px solid #555555;
 }
 
 .box:last-child {
-    border-left: 2px solid #555555;
+  border-left: 2px solid #555555;
 }
 
 .icon {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .icon img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
 .box h2 {
-    font-size: 1.5rem;
-    margin: 10px 0;
+  font-size: 1.5rem;
+  margin: 10px 0;
 }
 
 .box p {
-    font-size: 0.8rem;
-    margin: 0;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 @media (max-width: 960px) {
-    .three-box-container {
-        flex-direction: column; /* move boxes to a single column for tablets, mobile */
-    }
+  .three-box-container {
+    flex-direction: column; /* move boxes to a single column for tablets, mobile */
+  }
 
-    .box:first-child, .box:last-child {
-        border: none; /* remove borders, looks better than putting a border between*/
-    }
+  .box:first-child,
+  .box:last-child {
+    border: none; /* remove borders, looks better than putting a border between*/
+  }
 
-    .box p {
-        font-size: 1rem; /* make font bigger, easier to read */
-        margin: 0;
-    }
+  .box p {
+    font-size: 1rem; /* make font bigger, easier to read */
+    margin: 0;
+  }
 }
 
 /* ---------- SECONDARY IMAGE ---------- */
 
 .satellink-secondary-image {
-    position: relative;
-    height: 800px;
-    background-image: url("/images/satellink-home.webp");
-    background-size: cover; /* stretch to fit */
-    background-position: center;
+  position: relative;
+  height: 800px;
+  background-image: url("../images/satellink-home.webp");
+  background-size: cover; /* stretch to fit */
+  background-position: center;
 }
 
 .satellink-secondary-title {
-    position: absolute;
+  position: absolute;
 
-    /* CENTER TEXT */
-    top: 32.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    text-align: center;
-    width: 75%;
+  /* CENTER TEXT */
+  top: 32.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  width: 75%;
+}
+
+.satellink-secondary-title h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0px;
+}
+
+.satellink-secondary-title p {
+  margin-top: 0px;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 960px) {
+  .satellink-secondary-title {
+    width: 85%; /* needed for text spread adjustment */
   }
-  
+
   .satellink-secondary-title h1 {
-    font-size: 4.5rem;
-    margin-bottom: 0px;
+    font-size: 3rem;
   }
 
   .satellink-secondary-title p {
-    margin-top: 0px;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .satellink-secondary-title {
+    width: 90%; /* needed for text spread adjustment */
   }
 
-  @media (max-width: 960px) {
-    .satellink-secondary-title {
-        width: 85%; /* needed for text spread adjustment */
-      }
-    
-      .satellink-secondary-title h1 {
-        font-size: 3rem;
-      }
-
-      .satellink-secondary-title p {
-        font-size: 0.9rem;
-      }
+  .satellink-secondary-title h1 {
+    font-size: 2.5rem;
   }
 
-  @media (max-width: 480px) {
-    .satellink-secondary-title {
-        width: 90%; /* needed for text spread adjustment */
-      }
-    
-      .satellink-secondary-title h1 {
-        font-size: 2.5rem;
-      }
-
-      .satellink-secondary-title p {
-        font-size: 0.85rem;
-      }
+  .satellink-secondary-title p {
+    font-size: 0.85rem;
   }
+}
 
-  /* SECONDARY IMAGE -> VIDEO */
+/* SECONDARY IMAGE -> VIDEO */
 
+.satellink-secondary-install {
+  position: absolute;
+  top: 65%;
+  left: 45%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.satellink-secondary-install h1 {
+  font-size: 3rem;
+  margin-bottom: 0px;
+}
+
+.satellink-secondary-install p {
+  margin: 20px 0px;
+}
+
+.satellink-secondary-install h2 {
+  font-size: 2rem;
+  margin: 10px 0px 0px 0px;
+  padding-left: 10px;
+  border-left: 2px solid #555555;
+}
+
+.download-links {
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.download-links a {
+  color: white;
+  text-decoration: none;
+  padding-right: 50px;
+}
+
+.satellink-secondary-image video {
+  position: absolute;
+
+  /* DO NOT TOUCH -> took me two hours to get this to this point, it works, just leave it */
+  top: 67.5%;
+  right: 22.5%;
+  transform: translate(50%, -50%); /* + for x, - for y -> go by + for x axis -> fixes the video position */
+  width: 30%;
+  max-width: 880px;
+  height: auto;
+}
+
+/* video positioning abit scuffed when going under 1300px, not necessary but looks better */
+@media (max-width: 1300px) {
+  .satellink-secondary-image video {
+    top: 72.5%;
+  }
+}
+
+@media (max-width: 960px) {
   .satellink-secondary-install {
-    position: absolute;
-    top: 65%;
-    left: 45%;
-    width: 75%;
-    transform: translate(-50%, -50%);
-    text-align: left;
+    /* RECENTER TEXT */
+    left: 50%;
+    text-align: center;
+
+    width: 95%;
   }
-  
+
   .satellink-secondary-install h1 {
-    font-size: 3rem;
-    margin-bottom: 0px;
+    font-size: 2.5rem;
   }
 
   .satellink-secondary-install p {
-    margin: 20px 0px;
+    margin: 10px 0px;
+    font-size: 0.9rem;
   }
 
   .satellink-secondary-install h2 {
-    font-size: 2rem;
-    margin: 10px 0px 0px 0px;
-    padding-left: 10px;
-    border-left: 2px solid #555555;
+    border: none;
   }
 
-  .download-links {
-    font-size: 0.75rem;
-    font-weight: 700;
+  /* account for the right padding of the second text (child), it off-centers the text */
+  .download-links a:nth-child(2) {
+    padding-right: 0px;
   }
 
-  .download-links a {
-    color: white;
-    text-decoration: none;
-    padding-right: 50px;
-  }
-  
+  /* video will not be displayed under 960px */
   .satellink-secondary-image video {
-    position: absolute;
-
-    /* DO NOT TOUCH -> took me two hours to get this to this point, it works, just leave it */
-    top: 67.5%;
-    right: 22.5%;
-    transform: translate(50%, -50%); /* + for x, - for y -> go by + for x axis -> fixes the video position */
-    width: 30%;
-    max-width: 880px;
-    height: auto;
+    display: none;
   }
-
-  /* video positioning abit scuffed when going under 1300px, not necessary but looks better */
-  @media (max-width: 1300px) {
-    .satellink-secondary-image video {
-        top: 72.5%;
-      }
-    }
-
-  @media (max-width: 960px) {
-    .satellink-secondary-install {
-        /* RECENTER TEXT */
-        left: 50%;
-        text-align: center;
-
-        width: 95%;
-      }
-      
-      .satellink-secondary-install h1 {
-        font-size: 2.5rem;
-      }
-    
-      .satellink-secondary-install p {
-        margin: 10px 0px;
-        font-size: 0.9rem;
-      }
-    
-      .satellink-secondary-install h2 {
-        border: none;
-      }
-
-      /* account for the right padding of the second text (child), it off-centers the text */
-      .download-links a:nth-child(2) {
-        padding-right: 0px;
-      }
-    
-      /* video will not be displayed under 960px */
-      .satellink-secondary-image video {
-        display: none;
-      }
-  }
+}
 
 /* ---------- IN-BOX BOXES ---------- */
 
 .inbox-text {
-    text-align: center;
-    background-color: #1A1A1A;
-    padding-top: 30px;
+  text-align: center;
+  background-color: #1a1a1a;
+  padding-top: 30px;
 }
 
 .inbox-text h1 {
-    margin: 0px;
+  margin: 0px;
 }
 
 .inbox-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
-    background-color: #1A1A1A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  background-color: #1a1a1a;
 }
 
 .in-box {
-    flex: 1; /* center the boxes, works with justify-content -> DO NOT TOUCH */
-    padding: 0px 0px; /* use this and the margin in the box-container to keep space around the borders */
-    border-right: 2px solid #555555;
+  flex: 1; /* center the boxes, works with justify-content -> DO NOT TOUCH */
+  padding: 0px 0px; /* use this and the margin in the box-container to keep space around the borders */
+  border-right: 2px solid #555555;
 }
 
 .in-box:last-child {
-    border: none;
+  border: none;
 }
 
 .inbox-icon {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .inbox-icon img {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 .in-box p {
-    font-size: 0.8rem;
-    margin: 0;
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 @media (max-width: 960px) {
-    .inbox-container {
-        flex-direction: column; /* put boxes vertically in a column */
-        gap: 30px;
-    }
+  .inbox-container {
+    flex-direction: column; /* put boxes vertically in a column */
+    gap: 30px;
+  }
 
-    .in-box {
-        border: none;
-    }
+  .in-box {
+    border: none;
+  }
 
-    .in-box p {
-        font-size: 1rem;
-    }
+  .in-box p {
+    font-size: 1rem;
+  }
 }
 
 /* ---------- THIRD IMAGE ---------- */
 
 .satellink-third-image {
-    position: relative;
-    height: 400px;
-    background-image: url("/images/satellink-remote.webp");
-    background-size: cover; /* stretch to fit */
-    background-position: center;
+  position: relative;
+  height: 400px;
+  background-image: url("../images/satellink-remote.webp");
+  background-size: cover; /* stretch to fit */
+  background-position: center;
 }
 
 .satellink-third-title {
-    position: absolute;
-    top: 55%;
-    left: 45%;
-    width: 75%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-  }
-  
-  .satellink-third-title h1 {
-    font-size: 3rem;
-    margin-bottom: 0px;
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.satellink-third-title h1 {
+  font-size: 3rem;
+  margin-bottom: 0px;
+}
+
+.satellink-third-title p {
+  margin-top: 20px;
+}
+
+@media (max-width: 960px) {
+  .satellink-third-title {
+    width: 80%; /* needed for text spread adjustment */
   }
 
   .satellink-third-title p {
-    margin-top: 20px;
+    font-size: 0.9rem;
   }
+}
 
-  @media (max-width: 960px) {
-    .satellink-third-title {
-        width: 80%; /* needed for text spread adjustment */
-      }
-
-      .satellink-third-title p {
-        font-size: 0.9rem;
-      }
+@media (max-width: 480px) {
+  .satellink-third-title h1 {
+    font-size: 2.5rem;
   }
-
-  @media (max-width: 480px) {
-      .satellink-third-title h1 {
-        font-size: 2.5rem;
-      }
-  }
+}
 
 /* ---------- 30 DAY TRIAL ---------- */
 
 .trial-container {
-    margin: 40px auto;
-    text-align: center;
-    max-width: 600px; /* use max here not regulat width, looks better */
-    width: 90%;
+  margin: 40px auto;
+  text-align: center;
+  max-width: 600px; /* use max here not regulat width, looks better */
+  width: 90%;
 }
 
 .trial-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .trial-container p {
-    font-size: 1.25rem;
-    margin-bottom: 20px;
+  font-size: 1.25rem;
+  margin-bottom: 20px;
 }
 
 .trial-form {
-    margin: 25px 0;
+  margin: 25px 0;
 }
 
 .form-label {
-    display: block;
-    margin-bottom: 10px;
-    text-align: left;
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 .input-container {
-    display: flex;
-    border: 1px solid #555555;
-    margin-bottom: 15px;
+  display: flex;
+  border: 1px solid #555555;
+  margin-bottom: 15px;
 }
 
 input[type="text"] {
-    flex: 1; /* take up all the space */
-    padding: 10px;
-    border: none;
-    outline: none; /* remove outline when clicking on the box */
-    color: #ffffff; /* input text will be white */
-    background: #222222;
+  flex: 1; /* take up all the space */
+  padding: 10px;
+  border: none;
+  outline: none; /* remove outline when clicking on the box */
+  color: #ffffff; /* input text will be white */
+  background: #222222;
 }
 
 .order-button {
-    background: #000000;
-    color: #ffffff;
-    border: 1px solid white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: 700;
-    cursor: pointer; /* button like behavior */
-    transition: background 0.3s ease;
+  background: #000000;
+  color: #ffffff;
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer; /* button like behavior */
+  transition: background 0.3s ease;
 }
 
 .order-button:hover {
-    background: #aaaaaa;
+  background: #aaaaaa;
 }
 
 .availability-link {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 0.8rem;
-    font-weight: 700;
-    transition: opacity 0.3s ease;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 700;
+  transition: opacity 0.3s ease;
 }
 
 .availability-link:hover {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 @media (max-width: 960px) {
-    .trial-container p {
-        font-size: 0.9rem;
-      }
+  .trial-container p {
+    font-size: 0.9rem;
   }
+}
 
 @media (max-width: 480px) {
-    .order-button {
-        padding: 5px 5px;
-        font-size: 0.8rem;
-    }
+  .order-button {
+    padding: 5px 5px;
+    font-size: 0.8rem;
   }
+}

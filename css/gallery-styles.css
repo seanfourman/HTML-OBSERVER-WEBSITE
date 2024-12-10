@@ -1,107 +1,106 @@
 /* ---------- GALLERY MAIN IMAGE ---------- */
 
 .gallery-main-image {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-image: url("/images/gallery.webp");
-    background-size: cover; /* stretch to fit */
-    background-position: center;
-  }
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("../images/gallery.webp");
+  background-size: cover; /* stretch to fit */
+  background-position: center;
+}
 
+.gallery-image-title {
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%); /* center the text */
+  text-align: center;
+}
+
+.gallery-image-title h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 960px) {
   .gallery-image-title {
-    position: absolute;
-    color: #ffffff;
-    top: 50%;
-    left: 50%;
-    width: 75%;
-    transform: translate(-50%, -50%); /* center the text */
-    text-align: center;
+    width: 80%; /* needed for paragraph text spread */
   }
-  
+
   .gallery-image-title h1 {
-    font-size: 4.5rem;
-    margin-bottom: 0px;
+    font-size: 7rem;
   }
 
-  @media (max-width: 960px) {
-    .gallery-image-title {
-      width: 80%; /* needed for paragraph text spread */
-    }
-  
-    .gallery-image-title h1 {
-      font-size: 7rem;
-    }
-  
-    .gallery-image-title p {
-      margin-top: 0px;
-      font-size: 1.1rem;
-    }
+  .gallery-image-title p {
+    margin-top: 0px;
+    font-size: 1.1rem;
   }
-  
-  @media (max-width: 480px) {
-    .gallery-image-title {
-      width: 90%; /* needed for text spread adjustment */
-    }
-  
-    .gallery-image-title h1 {
-      font-size: 5rem;
-    }
+}
+
+@media (max-width: 480px) {
+  .gallery-image-title {
+    width: 90%; /* needed for text spread adjustment */
   }
 
- /* ---------- PHOTOS ---------- */
+  .gallery-image-title h1 {
+    font-size: 5rem;
+  }
+}
 
- .photo-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-    grid-template-rows: repeat(5, auto); /* 5 rows, auto for amount of rows used */
-    gap: 20px;
-    width: 90%;
-    margin: 50px auto; /* fix x, y axes */
-  }
-  
-  .photo-container {
-    position: relative; /* position the text relative to the container (the photo div) */
-    overflow: hidden; /* make text stay within the container */
-    width: 100%;
-    height: 350px; /* SET SPECIFIC HEIGHT FOR ALL IMAGES, MAYBE CHANGE LATER */
-  }
-  
-  .photo-container img {
-    width: 100%;
-    height: 100%; /* fix weird image spacing when going to mobile, tablet -> DO NOT TOUCH */
-    object-fit: cover; /* keep image aspect ratio, looks distorted otherwise */
-  }
-  
-  .photo-text {
-    position: absolute;
-    bottom: 0%;
+/* ---------- PHOTOS ---------- */
 
-    /* cool trick to center the text instead of using transform: translate */
-    left: 0%;
-    right: 0%;
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(5, auto); /* 5 rows, auto for amount of rows used */
+  gap: 20px;
+  width: 90%;
+  margin: 50px auto; /* fix x, y axes */
+}
 
-    background: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-    opacity: 0; /* start with 0 opacity to be hidden when not hovering */
-    transition: opacity 0.3s ease;
-  }
-  
-  .photo-container:hover .photo-text {
-    opacity: 1;
-  }
+.photo-container {
+  position: relative; /* position the text relative to the container (the photo div) */
+  overflow: hidden; /* make text stay within the container */
+  width: 100%;
+  height: 350px; /* SET SPECIFIC HEIGHT FOR ALL IMAGES, MAYBE CHANGE LATER */
+}
 
-  @media (max-width: 960px) {
-    .photo-gallery {
-      grid-template-columns: repeat(2, 1fr); /* switch to 2 columns */
-    }
+.photo-container img {
+  width: 100%;
+  height: 100%; /* fix weird image spacing when going to mobile, tablet -> DO NOT TOUCH */
+  object-fit: cover; /* keep image aspect ratio, looks distorted otherwise */
+}
+
+.photo-text {
+  position: absolute;
+  bottom: 0%;
+
+  /* cool trick to center the text instead of using transform: translate */
+  left: 0%;
+  right: 0%;
+
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  opacity: 0; /* start with 0 opacity to be hidden when not hovering */
+  transition: opacity 0.3s ease;
+}
+
+.photo-container:hover .photo-text {
+  opacity: 1;
+}
+
+@media (max-width: 960px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr); /* switch to 2 columns */
   }
-  
-  @media (max-width: 480px) {
-    .photo-gallery {
-      grid-template-columns: 1fr; /* switch to 1 column */
-    }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery {
+    grid-template-columns: 1fr; /* switch to 1 column */
   }
-  
+}

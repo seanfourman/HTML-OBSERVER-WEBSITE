@@ -1,54 +1,54 @@
 /* ---------- PLANETARY MAIN IMAGE ---------- */
 
 .planetary-main-image {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    background-image: url("/images/solarsystemplanetary.webp");
-    background-size: cover; /* stretch to fit */
-    background-position: center;
-  }
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("../images/solarsystemplanetary.webp");
+  background-size: cover; /* stretch to fit */
+  background-position: center;
+}
 
+.planetary-image-title {
+  position: absolute;
+  width: 75%;
+
+  /* CENTER TO MIDDLE */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+}
+
+.planetary-image-title h1 {
+  font-size: 4.5rem;
+  margin-bottom: 0px;
+}
+
+@media (max-width: 960px) {
   .planetary-image-title {
-    position: absolute;
-    width: 75%;
-    
-    /* CENTER TO MIDDLE */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    text-align: center;
+    width: 80%; /* needed for paragraph text spread */
   }
-  
+
+  .planetary-image-title p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .planetary-image-title {
+    width: 90%; /* needed for text spread adjustment */
+  }
+
   .planetary-image-title h1 {
-    font-size: 4.5rem;
-    margin-bottom: 0px;
+    font-size: 4rem;
   }
 
-  @media (max-width: 960px) {
-    .planetary-image-title {
-      width: 80%; /* needed for paragraph text spread */
-    }
-  
-    .planetary-image-title p {
-      font-size: 1.2rem;
-    }
+  .planetary-image-title p {
+    font-size: 1.1rem;
   }
-  
-  @media (max-width: 480px) {
-    .planetary-image-title {
-      width: 90%; /* needed for text spread adjustment */
-    }
-  
-    .planetary-image-title h1 {
-      font-size: 4rem;
-    }
-  
-    .planetary-image-title p {
-      font-size: 1.1rem;
-    }
-  }
+}
 
 /* ---------- PLANETARY SECTION ---------- */
 

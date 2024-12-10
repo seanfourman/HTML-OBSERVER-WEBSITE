@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   height: 650px; /* maybe change later? */
-  background-image: url("/images/earth.webp");
+  background-image: url("../images/earth.webp");
   background-size: cover; /* stretch to fit */
   background-position: center;
 }
@@ -25,11 +25,11 @@
 @media (max-width: 960px) {
   .main-image-title {
     width: 80%; /* needed for paragraph text spread */
-     /* RECENTER TO MIDDLE */
+    /* RECENTER TO MIDDLE */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     text-align: center;
   }
 
@@ -66,7 +66,7 @@
 .main-articles {
   position: absolute;
   bottom: 5%;
-  
+
   /* mayber better to just use width if possible? need to check */
   left: 5%;
   right: 5%;
@@ -229,7 +229,7 @@
   position: relative;
   width: 100%;
   height: 400px;
-  background-image: url("/images/earth2.webp");
+  background-image: url("../images/earth2.webp");
   background-size: cover; /* stretch to fit */
   background-position: center;
   margin-top: 70px; /* maybe less? need to check later */
@@ -244,7 +244,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
+
   text-align: center;
 }
 
@@ -346,7 +346,7 @@
   .topic-image {
     max-height: 150px;
   }
-  
+
   .image-overflow {
     height: 150px; /* resize "zoom-in (block) effect" for tablet, mobile */
   }
@@ -358,7 +358,7 @@
   position: relative;
   width: 100%;
   height: 250px;
-  background-image: url("/images/space.webp");
+  background-image: url("../images/space.webp");
   background-size: cover; /* stretch to fit */
   background-position: center;
   margin-top: 50px;
