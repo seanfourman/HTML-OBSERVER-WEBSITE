@@ -1,4 +1,4 @@
-const returnToTopButton = document.getElementById("return-to-top"); // need to use defer in script tag to make sure this is available
+const returnToTopButton = document.getElementById("return-to-top");
 
 if (returnToTopButton) {
   // scroll to top behavior

@@ -23,7 +23,17 @@
   font-size: 4.5rem;
 }
 
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 @media (max-width: 960px) {
+  footer {
+    position: relative;
+  }
+
   .about-main-title {
     width: 80%; /* needed for paragraph text spread */
   }
